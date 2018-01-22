@@ -1,25 +1,13 @@
-# ReduxSimpleStarter
+# REACT\_\_VideoBrowser
 
-Interested in learning [Redux](https://www.udemy.com/react-redux/)?
+A Video Browser Built with React
 
-### Getting Started
+### CORE
 
-There are two methods for getting started with this repo.
+> 1. REACT.JS
+> 1. JSX & ES6
 
-#### Familiar with Git?
-Checkout this repo, install dependencies, then start the gulp process with the following:
+### TOOLING(BUNDLER) JSX->ES6->ES5
 
-```
-> git clone https://github.com/StephenGrider/ReduxSimpleStarter.git
-> cd ReduxSimpleStarter
-> npm install
-> npm start
-```
-
-#### Not Familiar with Git?
-Click [here](https://github.com/StephenGrider/ReactStarter/releases) then download the .zip file.  Extract the contents of the zip file, then open your terminal, change to the project directory, and:
-
-```
-> npm install
-> npm start
-```
+> 1. WEBPACK
+> 1. BABEL
