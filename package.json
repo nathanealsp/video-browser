@@ -1,11 +1,12 @@
 {
-  "name": "redux-simple-starter",
+  "name": "react-video-browser",
   "version": "1.0.0",
-  "description": "Simple starter package for Redux with React and Babel support",
+  "description": "A Simple React Video Browser app ",
   "main": "index.js",
-  "repository": "git@github.com:StephenGrider/ReduxSimpleStarter.git",
+  "repository": "https://github.com/Nytheneals/REACT__VideoBrowser.git",
   "scripts": {
-    "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
+    "start": "npm run build",
+    "build": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot",
     "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js --recursive ./test",
     "test:watch": "npm run test -- --watch"
   },
@@ -16,22 +17,22 @@
     "babel-loader": "^6.2.0",
     "babel-preset-es2015": "^6.1.18",
     "babel-preset-react": "^6.1.18",
-    "chai": "^3.5.0",
+    "chai": "^4.1.2",
     "chai-jquery": "^2.0.0",
-    "jquery": "^2.2.1",
-    "jsdom": "^8.1.0",
-    "mocha": "^2.4.5",
-    "react-addons-test-utils": "^0.14.7",
+    "jquery": "^3.3.1",
+    "jsdom": "^11.6.0",
+    "mocha": "^5.0.0",
+    "react-addons-test-utils": "^15.6.2",
     "webpack": "^1.12.9",
     "webpack-dev-server": "^1.14.0"
   },
   "dependencies": {
-    "babel-preset-stage-1": "^6.1.18",
-    "lodash": "^3.10.1",
-    "react": "^0.14.3",
-    "react-dom": "^0.14.3",
-    "react-redux": "4.3.0",
-    "react-router": "^2.0.1",
-    "redux": "^3.0.4"
+    "babel-preset-stage-1": "^6.24.1",
+    "lodash": "^4.17.4",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-redux": "^5.0.6",
+    "react-router": "^4.2.0",
+    "redux": "^3.7.2"
   }
 }
