@@ -1,6 +1,9 @@
 /node_modules
-.DS_Store
-*.log
-.idea
+bundle.js
+npm-debug.log
 package-lock.json
-variables.env
+.DS_Store
+
+# IntelliJ
+*.iml
+/.idea
