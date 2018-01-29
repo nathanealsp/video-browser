@@ -7,12 +7,12 @@ import VideoDetail from './components/video_detail';
 import _ from 'lodash';
 
 // CREATE NEW COMPONENT
-class App extends React.Component {
+class App extends Component {
   render() {
     return (
       <div>
-        <h1>Hi!</h1>
         <SearchBar />
+        <VideoDetail />
         <VideoList />
       </div>
     );

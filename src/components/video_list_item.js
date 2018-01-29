@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
+import VideoDetail from './components/video_detail';
 
-class VideoListItem extends React.Component {
+class VideoListItem extends Component {
   render() {
     return (
       <div>

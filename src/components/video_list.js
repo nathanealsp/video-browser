@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import VideoListItem from './video_list_item';
+// import VideoListItem from '/components/video_list_item';
 
 // CREATE NEW COMPONENT
-class VideoList extends React.Component {
+class VideoList extends Component {
   render() {
     return (
       <div>
