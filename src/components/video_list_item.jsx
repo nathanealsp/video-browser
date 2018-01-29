@@ -1,12 +1,10 @@
-import React, { Component } from 'react';
-import VideoDetail from './components/video_detail';
+import React, { Component } from "react";
 
 class VideoListItem extends Component {
   render() {
     return (
       <div>
         <h1>VideoListItem</h1>
-        <VideoDetail />
       </div>
     );
   }

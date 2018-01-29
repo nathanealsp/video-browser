@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-// import VideoListItem from '/components/video_list_item';
+import React, { Component } from "react";
+// import VideoListItem from "./components/video_list_item";
 
 // CREATE NEW COMPONENT
 class VideoList extends Component {
@@ -7,7 +7,7 @@ class VideoList extends Component {
     return (
       <div>
         <h1>VideoList</h1>
-        <VideoListItem />
+        {/* <VideoListItem /> */}
       </div>
     );
   }
