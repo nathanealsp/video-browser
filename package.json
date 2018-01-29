@@ -28,11 +28,14 @@
   },
   "dependencies": {
     "babel-preset-stage-1": "^6.24.1",
+    "dotenv": "^4.0.0",
     "lodash": "^4.17.4",
+    "path": "^0.12.7",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-redux": "^5.0.6",
     "react-router": "^4.2.0",
-    "redux": "^3.7.2"
+    "redux": "^3.7.2",
+    "youtube-api-search": "0.0.5"
   }
 }
