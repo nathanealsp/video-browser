@@ -1,12 +1,12 @@
-import React, { Component } from "react";
-import ReactDOM from "react-dom";
+import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
 
 // THE SEARCH BAR COMPONENT
 class SearchBar extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      term: ""
+      term: '',
     };
     // This binding is necessary to make `this` work in the callback
     this.handleInputChange = this.handleInputChange.bind(this);
@@ -25,7 +25,6 @@ class SearchBar extends React.Component {
       <div className="search-bar">
         {/* <input onChange={event => this.setState({ term: event.target.value })} />Plan B */}
         <input value={this.state.term} onChange={this.handleInputChange} />
-        Value of input: {this.state.term}
       </div>
     );
   }
