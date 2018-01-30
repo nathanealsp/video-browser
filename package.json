@@ -6,8 +6,10 @@
   "repository": "https://github.com/Nytheneals/REACT__VideoBrowser.git",
   "scripts": {
     "start": "npm run build",
-    "build": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot",
-    "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js --recursive ./test",
+    "build":
+      "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot",
+    "test":
+      "mocha --compilers js:babel-core/register --require ./test/test_helper.js --recursive ./test",
     "test:watch": "npm run test -- --watch"
   },
   "author": "Nytheneals",
