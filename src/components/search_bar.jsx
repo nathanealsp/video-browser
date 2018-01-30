@@ -1,18 +1,34 @@
-import React, { Component } from "react";
-import ReactDOM from "react-dom";
+import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
 
-class SearchBar extends Component {
+// THE SEARCH BAR COMPONENT
+class SearchBar extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      term: '',
+    };
+    // This binding is necessary to make `this` work in the callback
+    this.handleInputChange = this.handleInputChange.bind(this);
+  }
+
+  // EVENT HANDLERS
+  // METHOD HANDLING THE CHANGE...
+  handleInputChange(e) {
+    // e.preventDefault();
+    this.setState({ term: e.target.value });
+  }
+
+  // RENDERING JSX..
   render() {
     return (
-      <div>
-        <input type="text" onChange={this.handleInputChange} />
+      <div className="search-bar">
+        {/* <input onChange={event => this.setState({ term: event.target.value })} />Plan B */}
+        <input value={this.state.term} onChange={this.handleInputChange} />
+        Value of input: {this.state.term}
       </div>
     );
   }
-  //Method handling the change in the input.
-  handleInputChange(e) {
-    // e.preventDefault();
-    console.log(e.target.value);
-  }
 }
+
 export default SearchBar;
