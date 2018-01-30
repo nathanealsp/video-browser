@@ -14,10 +14,12 @@ class App extends Component {
   constructor(props) {
     super(props);
 
-    this.state = { video: [] };
+    // SETTING INTIAL STATE
+    this.state = { videos: [] };
+
     // YOUTUBE API SEARCH
     YTSearch({ key: API_KEY, term: 'chris brown' }, (data) => {
-      this.setState({ video: data });
+      this.setState({ videos: data });
     });
   }
   render() {
@@ -25,7 +27,7 @@ class App extends Component {
       <div>
         <SearchBar />
         {/* <VideoDetail /> */}
-        {/* <VideoList /> */}
+        <VideoList videos={this.state.videos} />
       </div>
     );
   }
