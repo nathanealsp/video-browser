@@ -8,25 +8,25 @@ class SearchBar extends React.Component {
     this.state = {
       term: '',
     };
-    // This binding is necessary to make `this` work in the callback
-    this.handleInputChange = this.handleInputChange.bind(this);
-  }
-
-  // EVENT HANDLERS
-  // METHOD HANDLING THE CHANGE...
-  handleInputChange(e) {
-    // e.preventDefault();
-    this.setState({ term: e.target.value });
   }
 
   // RENDERING JSX..
   render() {
     return (
       <div className="search-bar">
-        {/* <input onChange={event => this.setState({ term: event.target.value })} />Plan B */}
-        <input value={this.state.term} onChange={this.handleInputChange} />
+        <input
+          value={this.state.term}
+          onChange={(e) => {
+            this.onInputChange(e.target.value);
+          }}
+        />
       </div>
     );
+  }
+
+  onInputChange(term) {
+    this.setState({ term });
+    this.props.onSearchTermChange(term);
   }
 }
 

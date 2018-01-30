@@ -21,25 +21,30 @@ class App extends Component {
     };
 
     // YOUTUBE API SEARCH
-    YTSearch({ key: API_KEY, term: 'info graphics show ' }, (data) => {
+    this.videoSearch('Vine king bach');
+  }
+
+  // YOUTUBE SEARCH FUNCTION
+
+  videoSearch(searchTerm) {
+    YTSearch({ key: API_KEY, term: searchTerm }, (data) => {
       this.setState({
         videos: data,
         selectedVideo: data[0],
       });
     });
-    // this.selectedVideo = this.selectedVideo.bind(this);
   }
-
-  // YOUTUBE SEARCH FUNCTION
-
-  videoSearch(term) {}
 
   // FROM APP--> VIDEOLIST --> VIDEOLIST ITEM(THIS WILL CHOSE THE VIDEO)
 
   render() {
+    // THROTTLING THE SEARCH
+    // const videoSearch = _.debounce((term) => {
+    //   this.videoSearch(term);
+    // }, 300);
     return (
       <div>
-        <SearchBar />
+        <SearchBar onSearchTermChange={searchTerm => this.videoSearch(searchTerm)} />
         <VideoDetail video={this.state.selectedVideo} />
         <VideoList
           videos={this.state.videos}
