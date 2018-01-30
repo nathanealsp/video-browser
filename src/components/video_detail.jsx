@@ -12,7 +12,7 @@ class VideoDetail extends Component {
     if (!video) {
       return <div>Loading......</div>;
     }
-    console.log(video);
+    // console.log(video);
 
     const videoId = video.id.videoId;
     const videoTitle = video.snippet.title;
@@ -47,7 +47,7 @@ export default VideoDetail;
 //   const videoTitle = video.snippet.title;
 //   const videoDescription = video.snippet.description;
 //   const url = `https://www.youtube.com/embed/${videoId}`;
-
+//----->
 //   return (
 //     <div className="video-detail col-md-8">
 //       <div className="embed-responsive embed-responsive-16by9">

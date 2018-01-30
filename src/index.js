@@ -15,19 +15,37 @@ class App extends Component {
     super(props);
 
     // SETTING INTIAL STATE
-    this.state = { videos: [] };
+    this.state = {
+      videos: [],
+      selectedVideo: null
+    };
 
     // YOUTUBE API SEARCH
     YTSearch({ key: API_KEY, term: "info graphics show " }, data => {
-      this.setState({ videos: data });
+      this.setState({
+        videos: data,
+        selectedVideo: data[0]
+      });
     });
+    this.selectedVideo = this.selectedVideo.bind(this);
   }
+  selectedVideo(selected) {
+    this.state({ selectedVideo: selected });
+  }
+
+  //YOUTUBE SEARCH FUNCTION
+
+  // FROM APP--> VIDEOLIST --> VIDEOLIST ITEM(THIS WILL CHOSE THE VIDEO)
+
   render() {
     return (
       <div>
         <SearchBar />
-        <VideoDetail video={this.state.videos[0]} />
-        <VideoList videos={this.state.videos} />
+        <VideoDetail video={this.state.selectedVideo} />
+        <VideoList
+          videos={this.state.videos}
+          onVideoSelect={this.selectedVideo}
+        />
       </div>
     );
   }
